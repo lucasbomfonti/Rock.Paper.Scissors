@@ -7,8 +7,6 @@ namespace Rock.Paper.Scissors.Game
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             var tournament = new Tournament(TournamentSeed.GetTournament());
             tournament.StartTournament();
             Console.ReadLine();

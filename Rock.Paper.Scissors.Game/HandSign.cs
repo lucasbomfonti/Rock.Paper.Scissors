@@ -33,16 +33,15 @@ namespace Rock.Paper.Scissors.Game
             Console.WriteLine($"{player1.Name}: {GameEnumHelper.GetName(player1.HandSign.Sign)} vs {player2.Name}: {GameEnumHelper.GetName(player2.HandSign.Sign)} ");
             if (GetWinningMove(player1.HandSign.Sign).Equals(player2.HandSign.Sign))
             {
+                Console.WriteLine($"Player {player2.Name} won the round, advances to the next round");
                 Console.WriteLine("--------------------------------------------------");
-                Console.WriteLine($"Player {player2.Name} the round, advances to the next round");
-
                 return player2;
             }
 
             if (GetWinningMove(player2.HandSign.Sign).Equals(player1.HandSign.Sign))
             {
+                Console.WriteLine($"Player {player1.Name} won the round, advances to the next round");
                 Console.WriteLine("--------------------------------------------------");
-                Console.WriteLine($"Player {player1.Name} the round, advances to the next round");
                 return player1;
             }
 

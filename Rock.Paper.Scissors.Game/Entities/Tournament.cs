@@ -22,7 +22,7 @@ namespace Rock.Paper.Scissors.Game.Entities
                 Player firstPlayer;
                 Player secondPlayer;
 
-                for (int i = 0; i < Player.Count; i++)
+                for (int i = 0; i < Player.Count; i+=2)
                 {
                     firstPlayer = Player[i];
                     secondPlayer = Player[(i + 1)];
@@ -31,7 +31,6 @@ namespace Rock.Paper.Scissors.Game.Entities
 
                     var winner = HandSign.GetWinner(firstPlayer, secondPlayer);
                     NextGroup.Add(winner);
-                    i++;
                 }
                 Player.Clear();
                 Player.AddRange(NextGroup);
@@ -39,7 +38,7 @@ namespace Rock.Paper.Scissors.Game.Entities
             }
 
             Console.WriteLine("**************************************************************************************************");
-            Console.WriteLine($"Congratulations {Player.First().Name}, you were the winner of the paper rock scissors tournament");
+            Console.WriteLine($"Congratulations {Player.First().Name}, you were the winner of the paper rock scissors tournament!!!!!");
         }
     }
 }
